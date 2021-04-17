@@ -16,7 +16,8 @@ Source0:    https://download.gnome.org/sources/gnome-connections/%{url_ver}/gnom
  
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
-BuildRequires:  libappstream-glib
+BuildRequires:  appstream-util
+BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  meson
 BuildRequires:  vala
 BuildRequires:  yelp-tools
