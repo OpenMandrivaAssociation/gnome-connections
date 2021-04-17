@@ -7,7 +7,7 @@
  
 Name:       gnome-connections
 Version:    40.0.1
-Release:    1%{?dist}
+Release:    1
 Summary:    A remote desktop client for the GNOME desktop environment
  
 License:    GPLv3+
@@ -15,7 +15,6 @@ URL:        https://gitlab.gnome.org/gnome/connections/-/wikis/home
 Source0:    https://download.gnome.org/sources/gnome-connections/%{url_ver}/gnome-connections-%{tarball_version}.tar.xz
  
 BuildRequires:  desktop-file-utils
-BuildRequires:  gcc
 BuildRequires:  gettext
 BuildRequires:  libappstream-glib
 BuildRequires:  meson
@@ -27,13 +26,11 @@ BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gtk-vnc-2.0)
  
 Requires:       hicolor-icon-theme
- 
-# Renamed from connections to gnome-connections in F34
-Obsoletes:      connections < 40.0-2
+
 Provides:       connections = %{version}-%{release}
  
 %description
-Connections is a remote desktop client for the GNOME desktop environment.
+Gnome-Connections is a remote desktop client for the GNOME desktop environment.
  
 %prep
 %autosetup -p1 -n gnome-connections-%{tarball_version}
@@ -41,8 +38,10 @@ Connections is a remote desktop client for the GNOME desktop environment.
 %build
 %meson
 %meson_build
+
 %install
 %meson_install
+
 %find_lang gnome-connections --with-gnome
  
 # Remove unneeded development files
@@ -51,10 +50,7 @@ rm -rf %{buildroot}%{_libdir}/gnome-connections/girepository-1.0/
 rm -rf %{buildroot}%{_libdir}/gnome-connections/pkgconfig/
 rm -rf %{buildroot}%{_datadir}/gnome-connections/gir-1.0/
 rm -rf %{buildroot}%{_datadir}/gnome-connections/vapi/
- 
-%check
-appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/org.gnome.Connections.appdata.xml
-desktop-file-validate %{buildroot}%{_datadir}/applications/org.gnome.Connections.desktop
+
  
 %files -f gnome-connections.lang
 %license COPYING
