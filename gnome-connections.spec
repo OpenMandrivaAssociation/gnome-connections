@@ -6,7 +6,7 @@
 %global url_ver %%(echo %{version} | cut -d. -f1)
  
 Name:       gnome-connections
-Version:    40.0.1
+Version:    41.0
 Release:    1
 Summary:    A remote desktop client for the GNOME desktop environment
  
