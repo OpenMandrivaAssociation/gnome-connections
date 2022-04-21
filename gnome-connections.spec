@@ -28,6 +28,7 @@ BuildRequires:  pkgconfig(gtk-vnc-2.0)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(libhandy-1)
+BuildRequires:  pkgconfig(libsecret-1)
  
 Requires:       hicolor-icon-theme
 
