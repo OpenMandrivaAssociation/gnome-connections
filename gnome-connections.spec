@@ -6,10 +6,10 @@
 %global url_ver %%(echo %{version} | cut -d. -f1)
  
 Name:       gnome-connections
-Version:    42.1.1
+Version:    42.1.2
 Release:    1
 Summary:    A remote desktop client for the GNOME desktop environment
- 
+
 License:    GPLv3+
 URL:        https://gitlab.gnome.org/gnome/connections/-/wikis/home
 Source0:    https://download.gnome.org/sources/gnome-connections/%{url_ver}/gnome-connections-%{tarball_version}.tar.xz
