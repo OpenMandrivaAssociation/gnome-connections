@@ -64,7 +64,7 @@ rm -rf %{buildroot}%{_datadir}/gnome-connections/vapi/
 %doc README.md NEWS
 %{_bindir}/gnome-connections
 %{_libdir}/gnome-connections/
-%{_datadir}/metainfo/org.gnome.Connections.appdata.xml
+%{_datadir}/metainfo/org.gnome.Connections.metainfo.xml
 %{_datadir}/applications/org.gnome.Connections.desktop
 %{_datadir}/dbus-1/services/org.gnome.Connections.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Connections.gschema.xml
