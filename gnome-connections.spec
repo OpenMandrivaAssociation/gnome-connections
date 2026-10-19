@@ -23,7 +23,7 @@ BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  meson
 BuildRequires:  vala
 BuildRequires:  yelp-tools
-BuildRequires:  pkgconfig(freerdp2)
+BuildRequires:  pkgconfig(freerdp3)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  gtk-update-icon-cache
