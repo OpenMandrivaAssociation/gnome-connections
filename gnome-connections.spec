@@ -45,6 +45,7 @@ Gnome-Connections is a remote desktop client for the GNOME desktop environment.
 %autosetup -p1 -n gnome-connections-%{tarball_version}
  
 %build
+export CFLAGS="${CFLAGS:+$CFLAGS }-I/usr/include/freerdp3 -I/usr/include/winpr3"
 %meson
 %meson_build
 
